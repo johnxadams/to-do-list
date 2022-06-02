@@ -6,12 +6,42 @@
 
 body {
     background-color: antiquewhite;
+    /* height: 100; */
+    display: flex;
 }
 .page-divider {
-    border: 1px;
+    border: 10px black solid;
     width: 50%;
-    height: 100vh;
+    height: 100vh ;
 }
 body div:first-child{
     background-color: darkblue;
+}
+body div:nth-child(2){
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.list-box {
+    border: 1px solid black;
+    width: 60%;
+    height: 70%;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.my-list{
+    border: 1px solid black;
+    width: 80%;
+    height: 80%;
+}
+form {
+   position: absolute;
+   bottom: 15%;
+   background-color: azure;
+   width: 15rem;
+   height: 2rem;
 }
