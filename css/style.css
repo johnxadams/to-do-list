@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+}
+.page-divider {
+    border: 1px;
+    width: 50%;
+    height: 100vh;
+}
+body div:first-child{
+    background-color: darkblue;
+}
