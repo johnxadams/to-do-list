@@ -1,12 +1,18 @@
 const myUl = document.querySelector('.my-list');
 myUl.style.backgroundColor = "pink" //isWorking
-// e === event
+
+//toDoInputText styling to usersInput
+let toDoInputText = document.querySelector("form > input[type='text']");
+toDoInputText.style.color ='red';
+// option 2:
+// let userDataText = document.querySelector('#user-data');
+// userDataText.style.color = 'red';
+// e === event -> functionParameterBelow
 const addToList = (e) => {
     e.preventDefault();
     console.log(e)
     let userData = document.querySelector('#user-data').value;
-    // let userDataText = document.querySelector('#user-data');
-
+    
     console.log(userData);
     if(!userData == ""){
         let newList = document.createElement('li');
@@ -17,7 +23,6 @@ const addToList = (e) => {
         /* 
         create new spanElement and append it as a child to newList 
         doneBtn & delBtna re supose to be inside a span
-
         */
         newList.appendChild(textNode);
         newList.appendChild(doneDelSpan)
@@ -26,7 +31,6 @@ const addToList = (e) => {
         delBtn.innerHTML = '❌️'
         doneDelSpan.appendChild(doneBtn);
         doneDelSpan.appendChild(delBtn);
-
 
         newList.style.cssText = 'display: flex; justify-content: space-between; color: white; font-size: 1.6rem';
         doneDelSpan.style.cssText = 'display: flex; justify-content: space-around; background-color: aliceblue; width: 5rem';
