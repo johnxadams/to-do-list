@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     /* height: 100; */
     display: flex;
 }
@@ -14,10 +14,27 @@ body {
     width: 50%;
     height: 100vh ;
 }
-body div:first-child{
-    background-color: darkblue;
+
+body .page-divider:first-child{
+    background-color: rgb(118, 118, 223);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
-body div:nth-child(2){
+form {
+    position: absolute;
+    /* bottom: 15%; */
+    background-color: goldenrod;
+    width: 35%;
+    height: 4rem;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+ }
+ #user-data {
+     height: 100%;
+     padding: 0 0 0 10px;
+ }
+body .page-divider:nth-child(2){
     background-color: green;
     display: flex;
     justify-content: center;
@@ -27,21 +44,16 @@ body div:nth-child(2){
 .list-box {
     border: 1px solid black;
     width: 60%;
-    height: 70%;
-    background-color: blue;
+    height: 85%;
+    background-color: rgb(149, 144, 118);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .my-list{
     border: 1px solid black;
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    height: 90%;
 }
-form {
-   position: absolute;
-   bottom: 15%;
-   background-color: azure;
-   width: 15rem;
-   height: 2rem;
-}
+
+
