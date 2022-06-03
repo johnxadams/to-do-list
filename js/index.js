@@ -3,7 +3,8 @@ myUl.style.backgroundColor = "pink" //isWorking
 
 //toDoInputText styling to usersInput
 let toDoInputText = document.querySelector("form > input[type='text']");
-toDoInputText.style.color ='red';
+
+toDoInputText.style.fontSize ='1.6rem';
 // option 2:
 // let userDataText = document.querySelector('#user-data');
 // userDataText.style.color = 'red';
@@ -38,11 +39,23 @@ const addToList = (e) => {
         delBtn.style.cssText = 'margin: 0 5% 0 5%; background-color: transparent; border: none; font-size: 1.3rem';
 
         document.querySelector('#user-data').value = "";
+
+        //adding the placeholder to the first ifStatement will unable me to give a request directly after users submitting any toDo.
+        document.querySelector('#user-data').placeholder = "...any other plans??" ;
     } else {
-        document.querySelector('#user-data').placeholder = "What you wanna do?" ;
+         //document.querySelector('#user-data').placeholder = "What you wanna do?" ;
+        // let toDoInputPlaceholder = document.querySelector('#user-data').placeholder;
+        // toDoInputPlaceholder = "Any other Plans?";
     }
     return newList;
 };
 
 document.querySelector("form").addEventListener("submit", addToList);
 
+/**
+ * next session:
+ * Form edit
+ * toDo button edit
+ * insert bgImage
+ * 
+ */
