@@ -1,10 +1,14 @@
 const myUl = document.querySelector('.my-list');
-myUl.style.backgroundColor = "pink" //isWorking
+// myUl.style.backgroundColor = "pink" 
 
 //toDoInputText styling to usersInput
 let toDoInputText = document.querySelector("form > input[type='text']");
 
 toDoInputText.style.fontSize ='1.6rem';
+toDoInputText.style.paddingLeft = '1.5rem';
+toDoInputText.style.borderRadius = '30px';
+toDoInputText.style.width = "100%"
+toDoInputText.style.outline = 'none';
 // option 2:
 // let userDataText = document.querySelector('#user-data');
 // userDataText.style.color = 'red';
@@ -33,15 +37,15 @@ const addToList = (e) => {
         doneDelSpan.appendChild(doneBtn);
         doneDelSpan.appendChild(delBtn);
 
-        newList.style.cssText = 'display: flex; justify-content: space-between; color: white; font-size: 1.6rem';
-        doneDelSpan.style.cssText = 'display: flex; justify-content: space-around; background-color: aliceblue; width: 5rem';
+        newList.style.cssText = 'display: flex; justify-content: space-between; color: black; font-size: 1.6rem';
+        doneDelSpan.style.cssText = 'display: flex; justify-content: space-around; background-color: transparent; width: 5rem';
         doneBtn.style.cssText = 'background-color: transparent; border: none; font-size: 1.3rem';
         delBtn.style.cssText = 'margin: 0 5% 0 5%; background-color: transparent; border: none; font-size: 1.3rem';
 
         document.querySelector('#user-data').value = "";
 
         //adding the placeholder to the first ifStatement will unable me to give a request directly after users submitting any toDo.
-        document.querySelector('#user-data').placeholder = "...any other plans??" ;
+        document.querySelector('#user-data').placeholder = "...any other plans?" ;
     } else {
          //document.querySelector('#user-data').placeholder = "What you wanna do?" ;
         // let toDoInputPlaceholder = document.querySelector('#user-data').placeholder;

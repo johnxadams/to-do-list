@@ -10,7 +10,7 @@ body {
     display: flex;
 }
 .page-divider {
-    border: 10px black solid;
+    border: 5px black solid;
     width: 50%;
     height: 100vh ;
 }
@@ -24,11 +24,13 @@ body .page-divider:first-child{
 form {
     position: absolute;
     /* bottom: 15%; */
-    background-color: goldenrod;
+    background-color: transparent;
     width: 35%;
     height: 4rem;
-    border-bottom: 2px solid black;
-    border-left: 2px solid black;
+    /* border-bottom: 2px solid black;
+    border-left: 2px solid black; */
+    border-radius: 10px;
+    margin-right: 3%;
  }
  #user-data {
      height: 100%;
@@ -45,13 +47,13 @@ body .page-divider:nth-child(2){
     border: 1px solid black;
     width: 60%;
     height: 85%;
-    background-color: rgb(149, 144, 118);
+    background-color: pink;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .my-list{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 90%;
     height: 90%;
 }
