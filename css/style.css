@@ -11,7 +11,7 @@ body {
 }
 .page-divider {
     border: 5px black solid;
-    width: 50%;
+    /* width: 50%; */
     height: 100vh ;
 }
 
@@ -20,6 +20,12 @@ body .page-divider:first-child{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    width: 45%;
+}
+#yearly-planer-img {
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
 }
 form {
     position: absolute;
@@ -42,6 +48,7 @@ body .page-divider:nth-child(2){
     justify-content: center;
     align-items: center;
     position: relative;
+    width: 55%;
 }
 .list-box {
     border: 1px solid black;
