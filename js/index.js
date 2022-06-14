@@ -46,20 +46,47 @@ const addToList = (e) => {
 
         //adding the placeholder to the first ifStatement will unable me to give a request directly after users submitting any toDo.
         document.querySelector('#user-data').placeholder = "...any other plans?" ;
+        
+        doneBtn.addEventListener("click", (e) => {
+            console.log(e)
+            if (e.target.matches("button:nth-child(1)")){
+                // e.target.parentElement.parentElement.style.backgroundColor = "black";
+                e.target.parentElement.parentElement.classList.add('cross-line');
+                e.target.parentElement.parentElement.classList.remove('remove-cross-line');
+                
+            } else  {
+                e.target.parentElement.parentElement.classList.remove('cross-line');
+                e.target.parentElement.parentElement.classList.add('remove-cross-line');
+            }
+
+        })
+
+        delBtn.addEventListener("click", (e) => {
+            // e.stopPropagation();
+            // console.log(e)
+            if (e.target.matches("button:nth-child(2)")){
+                myUl.removeChild(e.target.parentElement.parentElement)
+            }
+
+        })
+
+        
     } else {
          //document.querySelector('#user-data').placeholder = "What you wanna do?" ;
         // let toDoInputPlaceholder = document.querySelector('#user-data').placeholder;
         // toDoInputPlaceholder = "Any other Plans?";
     }
+
+    
     return newList;
 };
 
+// const modifyList = (e) => {
+
+// }
+
 document.querySelector("form").addEventListener("submit", addToList);
 
-/**
- * next session:
- * Form edit
- * toDo button edit
- * insert bgImage
- * 
- */
+
+// if statemment in line 52. Why can't I undo the ifStatement. 
+// as durchstreichen lässt sich nicht rückgängig machen,,... ? why??
