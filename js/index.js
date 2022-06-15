@@ -22,6 +22,7 @@ const addToList = (e) => {
     if(!userData == ""){
         let newList = document.createElement('li');
         let textNode = document.createTextNode(userData);
+        let labelText = document.createElement('label');
         let doneDelSpan = document.createElement('span');
         let doneBtn = document.createElement('button');
         let delBtn = document.createElement('button');
@@ -29,7 +30,8 @@ const addToList = (e) => {
         create new spanElement and append it as a child to newList 
         doneBtn & delBtna re supose to be inside a span
         */
-        newList.appendChild(textNode);
+        newList.prepend(labelText);
+        labelText.appendChild(textNode);
         newList.appendChild(doneDelSpan)
         myUl.appendChild(newList);
         doneBtn.innerHTML = '✅️'
@@ -51,12 +53,14 @@ const addToList = (e) => {
             console.log(e)
             if (e.target.matches("button:nth-child(1)")){
                 // e.target.parentElement.parentElement.style.backgroundColor = "black";
-                e.target.parentElement.parentElement.classList.add('cross-line');
-                e.target.parentElement.parentElement.classList.remove('remove-cross-line');
+                // closest li innerText - would this work?
+                // i just want to target to innerText of the <li>
+                e.target.parentElement.previousElementSibling.classList.toggle('cross-line');
+                // e.target.parentElement.parentElement.classList.remove('remove-cross-line');
                 
             } else  {
-                e.target.parentElement.parentElement.classList.remove('cross-line');
-                e.target.parentElement.parentElement.classList.add('remove-cross-line');
+                // e.target.parentElement.parentElement.classList.remove('cross-line');
+                // e.target.parentElement.parentElement.classList.add('remove-cross-line');
             }
 
         })
@@ -90,3 +94,4 @@ document.querySelector("form").addEventListener("submit", addToList);
 
 // if statemment in line 52. Why can't I undo the ifStatement. 
 // as durchstreichen lässt sich nicht rückgängig machen,,... ? why??
+
