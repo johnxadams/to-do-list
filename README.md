@@ -7,7 +7,7 @@ In this application it is a to-do list. You can enter a task that you want to do
 
 **_[Here you can have a look at my work.](https://johnxadams.github.io/to-do-list/)_**
 
-![youtube-play-logo](./img/todo-list-screenshot.png)
+![to-do-listpage-screenshot](./img/todo-list-screenshot.png)
 
 ---
 </div>
